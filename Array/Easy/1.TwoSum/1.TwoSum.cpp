@@ -1,6 +1,5 @@
 #include "1.TwoSum.hpp"
-
-
+#ifdef USEVEC
 vector<int> Solution::twoSumBruteForce(vector<int>& nums, int target)
 {
     vector<int> ans;
@@ -18,3 +17,10 @@ vector<int> Solution::twoSumBruteForce(vector<int>& nums, int target)
     }
     return ans;
 }
+#else
+vector<int> Solution::twoSumHashMap(vector<int>& nums, int target)
+{
+    vector<int> ans = {1,2,3};
+    return ans;
+}
+#endif
