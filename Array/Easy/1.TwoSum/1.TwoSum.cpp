@@ -16,5 +16,5 @@ vector<int> Solution::twoSumBruteForce(vector<int>& nums, int target)
             }
         }
     }
-    return {};
+    return ans;
 }
