@@ -27,21 +27,36 @@ vector<int> Solution::twoSumHashMap(vector<int>& nums, int target)
      * 4.当然不能同一个元素相加等于target
     **/
     vector<int> ans;
-    map<int,int>hashmap;
+    unordered_map<int,int>umap;
+    /* 这个是用2次循环,接下来尝试1次循环
     for (int i = 0 ; i < nums.size(); i++)
     {
-        hashmap[nums[i]] = i;
+        umap[nums[i]] = i;
     }
     for (int i = 0; i < nums.size(); i++)
     {
         int diff = target - nums[i];
-        if (hashmap.count(diff) == 1)
+        if (umap.count(diff) == 1)
         {
-            if (hashmap[diff] != i)
+            if (umap[diff] != i)
             {
-                ans = {i, hashmap[diff]};
+                ans = {i, umap[diff]};
                 return ans; 
             }
+        }
+    }
+    */
+    for (int i = 0; i < nums.size(); i++)
+    {
+        int key = nums[i];
+        int diff = target - key; 
+        if (umap.count(key) == 0)
+        {
+            umap[key] = i;
+        }
+        else
+        {
+            return {i, umap[diff]};
         }
     }
     return ans;
