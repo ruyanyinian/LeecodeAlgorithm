@@ -1,6 +1,5 @@
 #ifndef TwoSum_hpp
 #define TwoSum_hpp
-#define USEVEC
 #include <iostream>
 #include <vector>
 #include <map>

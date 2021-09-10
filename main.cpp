@@ -6,7 +6,7 @@ int main()
     vector<int> numsInput = {2, 7, 11, 15};
     vector<int> ans;
     int target = 9;
-    ans = twoSumAns.twoSumBruteForce(numsInput, 9);
+    ans = twoSumAns.twoSumHashMap(numsInput, 9);
     for (int i = 0; i < ans.size(); ++i)
     {
         cout << ans[i] << endl;
