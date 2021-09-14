@@ -17,7 +17,8 @@ vector<int> Solution::twoSumBruteForce(vector<int>& nums, int target)
     return ans;
 }
 
-vector<int> Solution::twoSumHashMap(vector<int>& nums, int target)
+#ifdef USEHASH
+vector<int> Solution::twoSumHashMapTwoIters(vector<int>& nums, int target)
 {
     /**
      * @brief hashmap方法。过程如下
@@ -28,7 +29,7 @@ vector<int> Solution::twoSumHashMap(vector<int>& nums, int target)
     **/
     vector<int> ans;
     unordered_map<int,int>umap;
-    /* 这个是用2次循环,接下来尝试1次循环
+    //这个是用2次循环
     for (int i = 0 ; i < nums.size(); i++)
     {
         umap[nums[i]] = i;
@@ -45,20 +46,27 @@ vector<int> Solution::twoSumHashMap(vector<int>& nums, int target)
             }
         }
     }
-    */
+    return ans;
+}
+
+vector<int> Solution::twoSumHashMapOneIters(vector<int>& nums, int target)
+{
+    vector<int> ans;
+    unordered_map<int,int>umap;
     for (int i = 0; i < nums.size(); i++)
     {
         int key = nums[i];
         int diff = target - key; 
-        if (umap.count(key) == 0)
+        if (umap.count(diff) == 0)
         {
             umap[key] = i;
         }
         else
         {
-            return {i, umap[diff]};
+            ans = {i, umap[diff]};
+            return ans;
         }
     }
     return ans;
 }
-
+#endif 

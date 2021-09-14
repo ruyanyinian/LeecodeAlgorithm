@@ -8,6 +8,7 @@ class Solution
 {
 public:
     vector<int> twoSumBruteForce(vector<int>& nums, int target);
-    vector<int> twoSumHashMap(vector<int>& nums, int target);
+    vector<int> twoSumHashMapTwoIters(vector<int>& nums, int target);
+    vector<int> twoSumHashMapOneIters(vector<int>& nums, int target);
 };
 #endif
