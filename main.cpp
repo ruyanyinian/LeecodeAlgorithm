@@ -1,4 +1,4 @@
-#include "Array/Easy/1.TwoSum/1.TwoSum.hpp"
+#include "1.TwoSum.hpp"
 
 int main()
 {
