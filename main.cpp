@@ -8,5 +8,3 @@ int main()
     cout << length << endl;
     return 0;
 }
-
-
