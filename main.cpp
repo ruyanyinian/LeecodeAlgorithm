@@ -1,10 +1,10 @@
-#include "RemoveDuplicates.hpp"
+#include "RemoveElement.hpp"
 
 int main()
 {
     Solution remove;
-    vector<int> nums = {1, 1, 2, 2, 3};
-    int length = remove.removeDuplicatesPointer(nums);
+    vector<int> nums = {3,2,2,3};
+    int length = remove.removeElement(nums, 3);
     cout << length << endl;
     return 0;
 }
