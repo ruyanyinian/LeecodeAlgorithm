@@ -1,15 +1,10 @@
-#include "1.TwoSum.hpp"
+#include "RemoveDuplicates.hpp"
 
 int main()
 {
-    Solution twoSumAns;
-    vector<int> numsInput = {2, 7, 11, 15};
-    vector<int> ans;
-    int target = 9;
-    ans = twoSumAns.twoSumHashMapOneIters(numsInput, 9);
-    for (int i = 0; i < ans.size(); i++)
-    {
-        cout << ans[i] << endl;
-    }
-    return 0; 
+    Solution remove;
+    vector<int> nums = {1, 1, 2, 2, 3};
+    int length = remove.removeDuplicates(nums);
+    cout << length << endl;
+    return 0;
 }
