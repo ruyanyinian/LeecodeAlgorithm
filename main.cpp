@@ -1,13 +1,9 @@
-#include "Array/Easy/88.MergedSortedArray/MergedSortedArray.hpp"
+#include "/home/qinyu/codes/LeecodeAlgorithm/Array/Easy/35.SearchInsertPosition/SearchInsertPosition.hpp"
 
 int main()
 {
-    Solution merged;
-    vector<int>nums1 = {1,2,3,0,0,0};
-    vector<int>nums2 = {2,5,6};
-    merged.merge(nums1, 3, nums2, 3);
-    for (int i=0; i<nums1.size(); i++)
-    {
-        cout << nums1[i] << endl;
-    }
+    Solution s;
+    vector<int>nums1 = {1,5,6};
+    int index = s.searchInsert(nums1, 3);
+    cout << index << endl; 
 }

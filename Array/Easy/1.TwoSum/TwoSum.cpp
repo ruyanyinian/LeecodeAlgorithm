@@ -17,7 +17,6 @@ vector<int> Solution::twoSumBruteForce(vector<int>& nums, int target)
     return ans;
 }
 
-#ifdef USEHASH
 vector<int> Solution::twoSumHashMapTwoIters(vector<int>& nums, int target)
 {
     /**
@@ -69,4 +68,3 @@ vector<int> Solution::twoSumHashMapOneIters(vector<int>& nums, int target)
     }
     return ans;
 }
-#endif 
