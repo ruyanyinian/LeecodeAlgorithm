@@ -1,9 +1,14 @@
-#include "/home/qinyu/codes/LeecodeAlgorithm/Array/Easy/35.SearchInsertPosition/SearchInsertPosition.hpp"
+#include "Array/Easy/66.PlusOne/PlusOne.hpp"
+
 
 int main()
 {
     Solution s;
-    vector<int>nums1 = {1,5,6};
-    int index = s.searchInsert(nums1, 3);
-    cout << index << endl; 
+    vector<int> digits = {1, 2, 3};
+    vector<int> ans = s.plusOne(digits);
+    for (int i=0; i<ans.size(); i++)
+    {
+        cout << ans[i] << endl;
+    }
+    return 0;
 }
