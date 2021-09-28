@@ -2,15 +2,29 @@
 
 vector<int> Solution::plusOne(vector<int>& digits)
 {
-    vector<int> ans = {};
-    for (int i=0; i<digits.size(); i++)
+    if((digits.back()+1)<10)
     {
-        if (i == digits.size()-1)
-        {
-            int last_digit = digits[i] + 1;
-            ans.push_back(last_digit);
-            return ans;
-        }
-        ans.push_back(digits[i]);
+        digits.back()++;
+        return digits;
     }
+    else
+    {
+        int sum = digits.back() + 1;
+        digits.back() = sum % 10;
+        int borrow = sum / 10;
+        int i;
+        
+        for(i=digits.size()-2; i>=0 && borrow>0; i--)
+        {
+            sum=digits[i] + borrow;
+            digits[i]=sum%10;
+            borrow = sum / 10;
+        }
+        
+        if(i<=0 && borrow>0)
+        {
+            digits.insert(digits.begin(), borrow);
+        }
+    }
+    return digits;
 }

@@ -4,7 +4,7 @@
 int main()
 {
     Solution s;
-    vector<int> digits = {1, 2, 3};
+    vector<int> digits = {9};
     vector<int> ans = s.plusOne(digits);
     for (int i=0; i<ans.size(); i++)
     {
