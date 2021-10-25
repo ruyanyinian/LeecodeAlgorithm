@@ -1,14 +1,10 @@
-#include "Array/Easy/66.PlusOne/PlusOne.hpp"
+#include "Array/Easy/136.SingleNumber/SingleNumber.hpp"
 
 
 int main()
 {
     Solution s;
-    vector<int> digits = {9};
-    vector<int> ans = s.plusOne(digits);
-    for (int i=0; i<ans.size(); i++)
-    {
-        cout << ans[i] << endl;
-    }
-    return 0;
+    vector<int>b = { 4,1,2,1,2 }; 
+    int a = s.singleNumber(b);
+    cout << a << endl; 
 }

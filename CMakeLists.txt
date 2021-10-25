@@ -1,9 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 project(leetCodeAlgorithm "CXX")
 set(CMAKE_CXX_STANDARD 11)
-include_directories(Array/Easy/66.PlusOne)
-add_subdirectory(Array/Easy/66.PlusOne)
-add_executable(main main.cpp)
-target_link_libraries(main plusOne)
 
+add_subdirectory(Array/Easy/136.SingleNumber)
+target_include_directories(
+    SingleNumber
+    PRIVATE
+    ${PROJECT_SOURCE_DIR}/include
+)
+add_executable(main main.cpp)
+target_link_libraries(main SingleNumber)
 
