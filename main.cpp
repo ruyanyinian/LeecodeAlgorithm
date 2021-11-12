@@ -1,10 +1,11 @@
-#include "Array/Easy/136.SingleNumber/SingleNumber.hpp"
+#include "Array/medium/11.ContainWithMostWater/ContainWithMostWater.hpp"
 
 
 int main()
 {
+    vector<int> a{4,3,2,1,4};
     Solution s;
-    vector<int>b = { 4,1,2,1,2 }; 
-    int a = s.singleNumber(b);
-    cout << a << endl; 
+    int ans = s.maxArea(a);
+    cout << ans <<endl;
+    return 0;
 }
